@@ -391,11 +391,11 @@
 
     <script>
         const menu = document.querySelector(".menu");
-        const menuItems = document.querySelectorAll(".menuItem");
         const hamburger= document.querySelector(".hamburger");
         const closeIcon= document.querySelector(".closeIcon");
         const menuIcon = document.querySelector(".menuIcon");
-        function toggleMenu() {
+        
+        function openclose() {
             if (menu.classList.contains("showMenu")) {
                 menu.classList.remove("showMenu");
                 closeIcon.style.display = "none";
@@ -407,13 +407,22 @@
                 menuIcon.style.display = "none";
                 }
             }
-            hamburger.addEventListener("click", toggleMenu);
-            
-            menuItems.forEach(
-                function(menuItem){ 
-                    menuItem.addEventListener("click", toggleMenu);
-                }
-            )
+        
+        function closeonclick(){
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove("showMenu");
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "block";
+        }}
+        
+        function closeonscroll(){
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        }
+        hamburger.addEventListener("click", openclose);
+        document.addEventListener("click", closeonclick);
+        document.addEventListener("scroll", closeonscroll);
     
     </script>
 
