@@ -14,8 +14,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Hey fellow coders and tech enthusiasts ! If you find any vulnerebility in the code for my portfolio, please feel free to DM me in any of the social media platforms.
