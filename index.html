@@ -295,30 +295,43 @@
         .closeIcon {
             display: none;
         }
-
+        
         .menu {
             position: fixed;
-            transform: translateY(-120%);
-            transition: transform 0.4s;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 99;
+            top: 60px;
+            right: 16px;
+            width: 260px;
+            max-width: 90vw;
+            height: auto;
+            padding: 12px 16px;
+            border-radius: 16px;
             background: rgb(58, 58, 58);
             list-style: none;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            margin-left: 50px;
-            border-radius: 50px;
-            width: 50%;
-            height: 65%;
-        }
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+            z-index: 99;
+            
         .showMenu {
             transform: translateY(0);
-            transition: transform 0.2s;
+            opacity: 1;
+            pointer-events: auto;
         }
 
+.menu li {
+    margin: 8px 0;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
 
         .fa {
             padding: 15px;
@@ -478,5 +491,6 @@
 
 </body>
 </html>
+
 
 
